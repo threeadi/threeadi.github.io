@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tri Adi — Software Engineer</title>
+        <meta
+            name="description"
+            content="Software Engineer with 2+ years of experience building scalable, high-traffic systems using PHP (Laravel) and Go."
+        />
+        <meta property="og:title" content="Tri Adi — Software Engineer" />
+        <meta
+            property="og:description"
+            content="Software Engineer specializing in scalable systems, promotion engines, and API performance."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <script type="module" src="/src/main.js"></script>
+    </head>
+    <body>
+        <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+        <nav
+            id="navbar"
+            class="fixed top-0 left-0 right-0 h-[68px] z-50 transition-all duration-300"
+        >
+            <div
+                class="max-w-site mx-auto px-6 h-full flex items-center justify-between"
+            >
+                <a
+                    href="/"
+                    class="font-mono text-xl font-semibold text-accent hover:text-accent-hi"
+                    >tri.</a
+                >
+
+                <ul class="hidden md:flex items-center gap-1 list-none">
+                    <li class="flex items-center">
+                        <span class="font-mono text-[0.7rem] text-accent mr-1"
+                            >01.</span
+                        >
+                        <a
+                            href="#experience"
+                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
+                            >Experience</a
+                        >
+                    </li>
+                    <li class="flex items-center">
+                        <span class="font-mono text-[0.7rem] text-accent mr-1"
+                            >02.</span
+                        >
+                        <a
+                            href="#skills"
+                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
+                            >Skills</a
+                        >
+                    </li>
+                    <li class="flex items-center">
+                        <span class="font-mono text-[0.7rem] text-accent mr-1"
+                            >03.</span
+                        >
+                        <a
+                            href="#projects"
+                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
+                            >Projects</a
+                        >
+                    </li>
+                    <li class="flex items-center">
+                        <span class="font-mono text-[0.7rem] text-accent mr-1"
+                            >04.</span
+                        >
+                        <a
+                            href="/blog/"
+                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
+                            >Blog</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#contact"
+                            class="font-mono text-[0.8rem] text-accent border border-accent px-4 py-1.5 rounded hover:bg-accent/10 transition-all ml-2"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+
+                <button
+                    id="hamburger"
+                    class="md:hidden flex flex-col justify-center gap-[5px] w-9 h-9 bg-transparent border-0 cursor-pointer p-1 rounded"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span class="block w-[22px] h-0.5 bg-t1 rounded"></span>
+                    <span class="block w-[22px] h-0.5 bg-t1 rounded"></span>
+                    <span class="block w-[22px] h-0.5 bg-t1 rounded"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div
+            id="mobile-menu"
+            class="fixed top-[68px] left-0 right-0 z-40 bg-canvas/[0.97] border-b border-line backdrop-blur-xl"
+        >
+            <a
+                href="#experience"
+                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
+                >Experience</a
+            >
+            <a
+                href="#skills"
+                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
+                >Skills</a
+            >
+            <a
+                href="#projects"
+                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
+                >Projects</a
+            >
+            <a
+                href="/blog/"
+                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
+                >Blog</a
+            >
+            <a
+                href="#contact"
+                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-4 hover:text-accent hover:bg-accent/10 transition-colors"
+                >Contact</a
+            >
+        </div>
+
+        <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+        <section
+            id="hero"
+            class="hero-dots hero-light min-h-screen flex flex-col justify-center pt-[68px] relative overflow-hidden"
+        >
+            <div class="relative z-10 max-w-site mx-auto px-6 w-full">
+                <p class="font-mono text-[0.9rem] text-accent mb-4">
+                    Hi, my name is
+                </p>
+                <h1
+                    class="text-[clamp(2.8rem,8vw,5.5rem)] font-bold tracking-[-2px] leading-[1.05] text-t1 mb-2"
+                >
+                    Tri Adi.
+                </h1>
+                <h2
+                    class="text-[clamp(1.5rem,4.5vw,3.2rem)] font-bold tracking-[-0.8px] leading-[1.15] text-t2 mb-7"
+                >
+                    I build scalable backend systems.
+                </h2>
+                <p class="max-w-[560px] text-base text-t2 leading-[1.75] mb-10">
+                    Software Engineer with 2+ years of experience building
+                    high-traffic systems using PHP (Laravel) and Go. Specialized
+                    in multi-rule promotion engines, distributed warehouse
+                    systems, and API performance optimization at scale.
+                </p>
+                <div class="flex gap-4 flex-wrap">
+                    <a href="#experience" class="btn btn-primary"
+                        >View My Work</a
+                    >
+                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+                </div>
+            </div>
+
+            <div
+                class="absolute bottom-9 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 font-mono text-[0.65rem] tracking-[1.5px] uppercase text-t3 animate-bounce"
+                aria-hidden="true"
+            >
+                <span>Scroll to experience</span>
+                <div
+                    class="w-2.5 h-2.5 border-r-[1.5px] border-b-[1.5px] border-t3 rotate-45 mt-0.5"
+                ></div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
+        <section id="experience" class="py-24 bg-canvas">
+            <div class="max-w-site mx-auto px-6">
+                <!-- Section header -->
+                <div class="flex items-center gap-3.5 mb-14">
+                    <span
+                        class="font-mono text-[0.95rem] text-accent flex-shrink-0"
+                        >01.</span
+                    >
+                    <h2
+                        class="text-[clamp(1.4rem,3vw,1.75rem)] font-bold tracking-tight whitespace-nowrap"
+                    >
+                        Work Experience
+                    </h2>
+                    <div class="flex-1 h-px bg-line min-w-[40px]"></div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="relative pl-8">
+                    <!-- continuous left rail — single element behind everything -->
+                    <div
+                        class="absolute left-[7px] top-0 bottom-0 w-px bg-line"
+                    ></div>
+
+                    <!-- ── PT Suitmedia ── -->
+                    <div class="reveal relative pb-10">
+                        <!-- dot: solid fill, consistent 8px -->
+                        <div
+                            class="absolute left-0 top-[6px] w-2 h-2 rounded-full bg-accent ring-[3px] ring-canvas"
+                        ></div>
+                        <div
+                            class="ml-6 card p-7 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        >
+                            <div
+                                class="flex flex-wrap justify-between items-start gap-4 mb-1.5"
+                            >
+                                <div>
+                                    <h3
+                                        class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                    >
+                                        PT Suitmedia Kreasi Indonesia
+                                    </h3>
+                                    <p class="font-mono text-[0.72rem] text-t3">
+                                        Jakarta, Indonesia
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex flex-col items-end gap-1.5 flex-shrink-0"
+                                >
+                                    <span
+                                        class="font-mono text-[0.74rem] text-t2 whitespace-nowrap"
+                                        >Aug 2023 – Present</span
+                                    >
+                                    <span
+                                        class="font-mono text-[0.65rem] text-accent bg-accent/10 border border-accent/30 px-2.5 py-[2px] rounded-full uppercase tracking-wide"
+                                        >Current</span
+                                    >
+                                </div>
+                            </div>
+                            <p
+                                class="font-mono text-[0.84rem] text-accent font-medium mb-4"
+                            >
+                                Software Engineer
+                            </p>
+                            <ul
+                                class="ml-[18px] list-disc mb-5 space-y-2 marker:text-accent"
+                            >
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Led backend development for high-traffic
+                                    enterprise applications handling 1,000+
+                                    concurrent users, ensuring scalability
+                                    during peak campaigns.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Architected a multi-rule promotion engine
+                                    with dynamic targeting and stacking logic,
+                                    improving campaign flexibility across the
+                                    platform.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Designed a multi-warehouse stock allocation
+                                    system based on geolocation, reducing order
+                                    processing time by 30%.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Improved API performance by up to 50%
+                                    through query optimization, strategic
+                                    indexing, and caching strategies.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">PHP</span>
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Redis</span>
+                                <span class="tag">Meilisearch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Bangkit Academy ── -->
+                    <div
+                        class="reveal relative pb-10"
+                        style="transition-delay: 80ms"
+                    >
+                        <div
+                            class="absolute left-0 top-[6px] w-2 h-2 rounded-full bg-accent ring-[3px] ring-canvas"
+                        ></div>
+                        <div
+                            class="ml-6 card p-7 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        >
+                            <div
+                                class="flex flex-wrap justify-between items-start gap-4 mb-1.5"
+                            >
+                                <div>
+                                    <h3
+                                        class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                    >
+                                        Bangkit Academy
+                                    </h3>
+                                    <p class="font-mono text-[0.72rem] text-t3">
+                                        Bandung, Indonesia · Google, Tokopedia,
+                                        Gojek, Traveloka
+                                    </p>
+                                </div>
+                                <span
+                                    class="font-mono text-[0.74rem] text-t2 whitespace-nowrap flex-shrink-0"
+                                    >Feb – Jul 2023</span
+                                >
+                            </div>
+                            <p
+                                class="font-mono text-[0.84rem] text-accent font-medium mb-4"
+                            >
+                                Cloud Computing Engineer Cohort
+                            </p>
+                            <ul
+                                class="ml-[18px] list-disc mb-5 space-y-2 marker:text-accent"
+                            >
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Completed intensive Google Cloud training
+                                    focused on backend infrastructure and
+                                    scalable deployment systems.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Built a TypeScript-based backend service
+                                    integrating an AI-powered calorie detection
+                                    system, supporting 20+ test cases.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Collaborated in a team-based environment
+                                    developing cloud-native applications
+                                    following industry best practices.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Google Cloud</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Evermos ── -->
+                    <div
+                        class="reveal relative pb-10"
+                        style="transition-delay: 160ms"
+                    >
+                        <div
+                            class="absolute left-0 top-[6px] w-2 h-2 rounded-full bg-accent ring-[3px] ring-canvas"
+                        ></div>
+                        <div
+                            class="ml-6 card p-7 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        >
+                            <div
+                                class="flex flex-wrap justify-between items-start gap-4 mb-1.5"
+                            >
+                                <div>
+                                    <h3
+                                        class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                    >
+                                        Evermos
+                                    </h3>
+                                    <p class="font-mono text-[0.72rem] text-t3">
+                                        Bandung, Indonesia
+                                    </p>
+                                </div>
+                                <span
+                                    class="font-mono text-[0.74rem] text-t2 whitespace-nowrap flex-shrink-0"
+                                    >Mar – Apr 2023</span
+                                >
+                            </div>
+                            <p
+                                class="font-mono text-[0.84rem] text-accent font-medium mb-4"
+                            >
+                                Project-Based Backend Developer Intern
+                            </p>
+                            <ul
+                                class="ml-[18px] list-disc mb-5 space-y-2 marker:text-accent"
+                            >
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Developed REST APIs using Go and MySQL,
+                                    ensuring efficient data processing.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Designed normalized database schemas,
+                                    improving data consistency and reducing
+                                    redundancy by 25%.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Implemented CRUD services supporting
+                                    scalable backend operations and seamless
+                                    frontend integration.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">Go</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── DPM FILKOM (Org) ── -->
+                    <div
+                        class="reveal relative pb-10"
+                        style="transition-delay: 240ms"
+                    >
+                        <div
+                            class="absolute left-0 top-[6px] w-2 h-2 rounded-full bg-accent-org ring-[3px] ring-canvas"
+                        ></div>
+                        <div
+                            class="ml-6 card p-7 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        >
+                            <div
+                                class="flex flex-wrap justify-between items-start gap-4 mb-1.5"
+                            >
+                                <div>
+                                    <h3
+                                        class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                    >
+                                        DPM FILKOM UB
+                                    </h3>
+                                    <p class="font-mono text-[0.72rem] text-t3">
+                                        Malang, Jawa Timur · Organizational
+                                    </p>
+                                </div>
+                                <span
+                                    class="font-mono text-[0.74rem] text-t2 whitespace-nowrap flex-shrink-0"
+                                    >Feb – Dec 2022</span
+                                >
+                            </div>
+                            <p
+                                class="font-mono text-[0.84rem] text-accent-org font-medium mb-4"
+                            >
+                                PIT Expert Staff
+                            </p>
+                            <ul
+                                class="ml-[18px] list-disc mb-5 space-y-2 marker:text-accent-org"
+                            >
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Developed REST APIs using Go and MySQL to
+                                    support operational needs across multiple
+                                    divisions.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Built an organizational website using
+                                    Laravel and ReactJS, increasing information
+                                    accessibility and engagement.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Managed virtual event infrastructure for
+                                    organizational programs.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag-org">Go</span>
+                                <span class="tag-org">Laravel</span>
+                                <span class="tag-org">ReactJS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── KBMTI (Org, last) ── -->
+                    <div
+                        class="reveal relative"
+                        style="transition-delay: 320ms"
+                    >
+                        <div
+                            class="absolute left-0 top-[6px] w-2 h-2 rounded-full bg-accent-org ring-[3px] ring-canvas"
+                        ></div>
+                        <div
+                            class="ml-6 card p-7 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        >
+                            <div
+                                class="flex flex-wrap justify-between items-start gap-4 mb-1.5"
+                            >
+                                <div>
+                                    <h3
+                                        class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                    >
+                                        KBMTI, Universitas Brawijaya
+                                    </h3>
+                                    <p class="font-mono text-[0.72rem] text-t3">
+                                        Malang, Jawa Timur · Organizational
+                                    </p>
+                                </div>
+                                <span
+                                    class="font-mono text-[0.74rem] text-t2 whitespace-nowrap flex-shrink-0"
+                                    >Feb – Dec 2022</span
+                                >
+                            </div>
+                            <p
+                                class="font-mono text-[0.84rem] text-accent-org font-medium mb-4"
+                            >
+                                Research and Development Staff
+                            </p>
+                            <ul
+                                class="ml-[18px] list-disc mb-5 space-y-2 marker:text-accent-org"
+                            >
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Conducted mini bootcamps training freshmen
+                                    in web development (HTML, CSS), achieving
+                                    90%+ positive feedback.
+                                </li>
+                                <li
+                                    class="text-[0.88rem] text-t2 leading-[1.7]"
+                                >
+                                    Developed a web-based platform for
+                                    organizational information management using
+                                    Laravel.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag-org">Laravel</span>
+                                <span class="tag-org">HTML</span>
+                                <span class="tag-org">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /timeline -->
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+        <section id="skills" class="py-24 bg-canvas-alt">
+            <div class="max-w-site mx-auto px-6">
+                <div class="flex items-center gap-3.5 mb-14">
+                    <span
+                        class="font-mono text-[0.95rem] text-accent flex-shrink-0"
+                        >02.</span
+                    >
+                    <h2
+                        class="text-[clamp(1.4rem,3vw,1.75rem)] font-bold tracking-tight whitespace-nowrap"
+                    >
+                        Technical Skills
+                    </h2>
+                    <div class="flex-1 h-px bg-line min-w-[40px]"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="reveal card p-7">
+                        <h3
+                            class="font-mono text-[0.7rem] font-semibold uppercase tracking-[1.8px] text-accent mb-5"
+                        >
+                            Programming Languages
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Golang</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Shell Scripting</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal card p-7"
+                        style="transition-delay: 100ms"
+                    >
+                        <h3
+                            class="font-mono text-[0.7rem] font-semibold uppercase tracking-[1.8px] text-accent mb-5"
+                        >
+                            Frameworks &amp; Libraries
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">ViteJS</span>
+                            <span class="skill-tag">NodeJS</span>
+                            <span class="skill-tag">VueJs</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal card p-7"
+                        style="transition-delay: 200ms"
+                    >
+                        <h3
+                            class="font-mono text-[0.7rem] font-semibold uppercase tracking-[1.8px] text-accent mb-5"
+                        >
+                            Databases
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Oracle Database</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal card p-7"
+                        style="transition-delay: 300ms"
+                    >
+                        <h3
+                            class="font-mono text-[0.7rem] font-semibold uppercase tracking-[1.8px] text-accent mb-5"
+                        >
+                            Tools &amp; Infrastructure
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">RabbitMQ</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">OpenTelemetry</span>
+                            <span class="skill-tag">Vault</span>
+                            <span class="skill-tag">Consul</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Google Cloud Platform</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+        <section id="projects" class="py-24 bg-canvas">
+            <div class="max-w-site mx-auto px-6">
+                <div class="flex items-center gap-3.5 mb-14">
+                    <span
+                        class="font-mono text-[0.95rem] text-accent flex-shrink-0"
+                        >03.</span
+                    >
+                    <h2
+                        class="text-[clamp(1.4rem,3vw,1.75rem)] font-bold tracking-tight whitespace-nowrap"
+                    >
+                        Projects
+                    </h2>
+                    <div class="flex-1 h-px bg-line min-w-[40px]"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- DatascripMall.ID — full width to showcase screenshots -->
+                    <div
+                        class="reveal card p-7 flex flex-col gap-5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)] md:col-span-2"
+                    >
+                        <div
+                            class="flex items-start justify-between gap-3 flex-wrap"
+                        >
+                            <div>
+                                <h3
+                                    class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                >
+                                    DatascripMall.ID
+                                </h3>
+                                <p class="font-mono text-[0.72rem] text-t3">
+                                    E-commerce Platform
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[0.72rem] text-t2 flex-shrink-0"
+                                >2025</span
+                            >
+                        </div>
+
+                        <!-- Screenshots gallery -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button
+                                class="lightbox-trigger group relative rounded-lg overflow-hidden border border-line hover:border-accent/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                data-src="/images/datascripmall-marketplace.png"
+                                data-caption="Marketplace — Landing Page"
+                            >
+                                <img
+                                    src="/images/datascripmall-marketplace.png"
+                                    alt="DatascripMall.ID Marketplace Landing Page"
+                                    class="w-full h-48 object-cover object-top"
+                                    loading="lazy"
+                                />
+                                <div
+                                    class="absolute inset-0 bg-canvas/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                                >
+                                    <svg
+                                        class="text-t1"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        width="20"
+                                        height="20"
+                                    >
+                                        <path
+                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+                                        />
+                                    </svg>
+                                    <span
+                                        class="font-mono text-[0.72rem] text-t1"
+                                        >Marketplace</span
+                                    >
+                                </div>
+                            </button>
+
+                            <button
+                                class="lightbox-trigger group relative rounded-lg overflow-hidden border border-line hover:border-accent/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                data-src="/images/datascripmall-seller.png"
+                                data-caption="Seller Portal — Dashboard"
+                            >
+                                <img
+                                    src="/images/datascripmall-seller.png"
+                                    alt="DatascripMall.ID Seller Portal Dashboard"
+                                    class="w-full h-48 object-cover object-top"
+                                    loading="lazy"
+                                />
+                                <div
+                                    class="absolute inset-0 bg-canvas/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                                >
+                                    <svg
+                                        class="text-t1"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        width="20"
+                                        height="20"
+                                    >
+                                        <path
+                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+                                        />
+                                    </svg>
+                                    <span
+                                        class="font-mono text-[0.72rem] text-t1"
+                                        >Seller Portal</span
+                                    >
+                                </div>
+                            </button>
+                        </div>
+
+                        <ul
+                            class="ml-[18px] list-disc space-y-2 marker:text-accent"
+                        >
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Developed a multi-rule promotion engine (minimum
+                                purchase, user targeting, stacking logic) to
+                                support complex campaign strategies.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Implemented a multi-warehouse checkout system
+                                dynamically allocating nearest stock, improving
+                                fulfillment efficiency.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Integrated Meilisearch to enhance product search
+                                speed and accuracy, reducing response time by
+                                50%.
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Meilisearch</span>
+                        </div>
+                    </div>
+
+                    <!-- ITB FinAid — full width to showcase screenshots -->
+                    <div
+                        class="reveal card p-7 flex flex-col gap-5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)] md:col-span-2"
+                        style="transition-delay: 80ms"
+                    >
+                        <div
+                            class="flex items-start justify-between gap-3 flex-wrap"
+                        >
+                            <div>
+                                <h3
+                                    class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                >
+                                    ITB FinAid
+                                </h3>
+                                <p class="font-mono text-[0.72rem] text-t3">
+                                    Scholarship Management System · Institut
+                                    Teknologi Bandung
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[0.72rem] text-t2 flex-shrink-0"
+                                >2024</span
+                            >
+                        </div>
+
+                        <!-- Screenshots gallery -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button
+                                class="lightbox-trigger group relative rounded-lg overflow-hidden border border-line hover:border-accent/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                data-src="/images/itbfinaid-scholarship-list.png"
+                                data-caption="ITB FinAid — Scholarship Listing"
+                            >
+                                <img
+                                    src="/images/itbfinaid-scholarship-list.png"
+                                    alt="ITB FinAid Scholarship Listing Page"
+                                    class="w-full h-48 object-cover object-top"
+                                    loading="lazy"
+                                />
+                                <div
+                                    class="absolute inset-0 bg-canvas/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                                >
+                                    <svg
+                                        class="text-t1"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        width="20"
+                                        height="20"
+                                    >
+                                        <path
+                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+                                        />
+                                    </svg>
+                                    <span
+                                        class="font-mono text-[0.72rem] text-t1"
+                                        >Scholarship Listing</span
+                                    >
+                                </div>
+                            </button>
+
+                            <button
+                                class="lightbox-trigger group relative rounded-lg overflow-hidden border border-line hover:border-accent/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                data-src="/images/itbfinaid-landing.png"
+                                data-caption="ITB FinAid — Landing Page"
+                            >
+                                <img
+                                    src="/images/itbfinaid-landing.png"
+                                    alt="ITB FinAid Landing Page"
+                                    class="w-full h-48 object-cover object-top"
+                                    loading="lazy"
+                                />
+                                <div
+                                    class="absolute inset-0 bg-canvas/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                                >
+                                    <svg
+                                        class="text-t1"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        width="20"
+                                        height="20"
+                                    >
+                                        <path
+                                            d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+                                        />
+                                    </svg>
+                                    <span
+                                        class="font-mono text-[0.72rem] text-t1"
+                                        >Landing Page</span
+                                    >
+                                </div>
+                            </button>
+                        </div>
+
+                        <ul
+                            class="ml-[18px] list-disc space-y-2 marker:text-accent"
+                        >
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Developed end-to-end scholarship backend
+                                supporting 1,000+ active students from creation
+                                to disbursement.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Architected integrations with ITB internal
+                                systems (SIX, HRIS, Siskeu, Sispran) for
+                                real-time student data sync and automated
+                                invoice processing.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Implemented RBAC, document management workflows,
+                                and an automated notification system for
+                                students, partners, and admins.
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">RBAC</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <!-- ITB Mobile -->
+                    <div
+                        class="reveal card p-7 flex flex-col gap-5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        style="transition-delay: 160ms"
+                    >
+                        <div
+                            class="flex items-start justify-between gap-3 flex-wrap"
+                        >
+                            <div>
+                                <h3
+                                    class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                >
+                                    ITB Mobile
+                                </h3>
+                                <p class="font-mono text-[0.72rem] text-t3">
+                                    Academic System · Institut Teknologi Bandung
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[0.72rem] text-t2 flex-shrink-0"
+                                >2024</span
+                            >
+                        </div>
+                        <ul
+                            class="ml-[18px] list-disc space-y-2 marker:text-accent flex-1"
+                        >
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Contributed to backend for academic services
+                                (KRS, scheduling, attendance, notifications)
+                                supporting 1,000+ daily users.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Optimized database queries and API performance,
+                                reducing response time by up to 50% during peak
+                                registration periods.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Implemented caching strategies ensuring system
+                                stability under high concurrent load.
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Go</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <!-- Modular CMS -->
+                    <div
+                        class="reveal card p-7 flex flex-col gap-5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.32)]"
+                        style="transition-delay: 240ms"
+                    >
+                        <div
+                            class="flex items-start justify-between gap-3 flex-wrap"
+                        >
+                            <div>
+                                <h3
+                                    class="text-[1.05rem] font-semibold text-t1 mb-0.5"
+                                >
+                                    Modular CMS System
+                                </h3>
+                                <p class="font-mono text-[0.72rem] text-t3">
+                                    Content Management System
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[0.72rem] text-t2 flex-shrink-0"
+                                >2023</span
+                            >
+                        </div>
+                        <ul
+                            class="ml-[18px] list-disc space-y-2 marker:text-accent flex-1"
+                        >
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Built a customizable CMS backend enabling
+                                dynamic configuration of content components,
+                                improving content management efficiency.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Designed modular backend architecture using
+                                scalable design patterns, enabling faster
+                                feature development and easier maintenance.
+                            </li>
+                            <li class="text-[0.87rem] text-t2 leading-[1.7]">
+                                Developed RBAC and content workflows, enhancing
+                                system security and reducing manual content
+                                errors.
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">RBAC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ BLOG PREVIEW ═══════════════════════════════ -->
+        <section id="blog" class="py-24 bg-canvas-alt">
+            <div class="max-w-site mx-auto px-6">
+                <div class="flex items-center gap-3.5 mb-14">
+                    <span
+                        class="font-mono text-[0.95rem] text-accent flex-shrink-0"
+                        >04.</span
+                    >
+                    <h2
+                        class="text-[clamp(1.4rem,3vw,1.75rem)] font-bold tracking-tight whitespace-nowrap"
+                    >
+                        Latest Writing
+                    </h2>
+                    <div class="flex-1 h-px bg-line min-w-[40px]"></div>
+                </div>
+
+                <!-- Blog cards loaded dynamically from posts.json -->
+                <div
+                    id="blog-preview"
+                    class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10"
+                >
+                    <!-- JS injects cards here -->
+                    <div
+                        class="col-span-full text-center text-t3 font-mono text-sm py-8"
+                    >
+                        Loading posts…
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="/blog/" class="btn btn-outline">View All Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+        <section id="contact" class="py-24 bg-canvas-alt">
+            <div class="max-w-site mx-auto px-6">
+                <div class="flex items-center gap-3.5 mb-14">
+                    <span
+                        class="font-mono text-[0.95rem] text-accent flex-shrink-0"
+                        >05.</span
+                    >
+                    <h2
+                        class="text-[clamp(1.4rem,3vw,1.75rem)] font-bold tracking-tight whitespace-nowrap"
+                    >
+                        What's Next?
+                    </h2>
+                    <div class="flex-1 h-px bg-line min-w-[40px]"></div>
+                </div>
+
+                <div
+                    class="max-w-[520px] mx-auto text-center flex flex-col items-center gap-6"
+                >
+                    <h3
+                        class="text-[clamp(1.8rem,4vw,2.6rem)] font-bold tracking-tight"
+                    >
+                        Get In Touch
+                    </h3>
+                    <p class="text-[0.95rem] text-t2 leading-[1.75]">
+                        I'm currently open to new opportunities and would love
+                        to hear from you. Whether you have a project in mind, a
+                        question, or just want to say hi — feel free to reach
+                        out!
+                    </p>
+                    <div class="flex gap-3.5 flex-wrap justify-center">
+                        <a
+                            href="mailto:triadilaksamana@gmail.com"
+                            class="btn btn-primary btn-lg"
+                            >Say Hello</a
+                        >
+                        <a
+                            href="https://linkedin.com/in/tri-adi-2249621ab/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-ghost btn-lg"
+                            >LinkedIn</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+        <footer class="bg-canvas border-t border-line py-10">
+            <div
+                class="max-w-site mx-auto px-6 flex flex-col items-center gap-3.5 text-center"
+            >
+                <div class="flex gap-5">
+                    <a
+                        href="https://github.com/bangyadiii"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                        class="text-t3 hover:text-accent hover:-translate-y-0.5 transition-all"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            width="18"
+                            height="18"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/tri-adi-2249621ab/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        class="text-t3 hover:text-accent hover:-translate-y-0.5 transition-all"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            width="18"
+                            height="18"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        href="mailto:triadilaksamana@gmail.com"
+                        aria-label="Email"
+                        class="text-t3 hover:text-accent hover:-translate-y-0.5 transition-all"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            width="18"
+                            height="18"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                <p class="font-mono text-[0.78rem] text-t2">
+                    tri. · Software Engineer
+                </p>
+                <p class="font-mono text-[0.68rem] text-t3">
+                    © 2025 Tri Adi. Built with Vite &amp; Tailwind CSS.
+                </p>
+            </div>
+        </footer>
+
+        <!-- ═══════════════════════════════ LIGHTBOX ═══════════════════════════════ -->
+        <div
+            id="lightbox"
+            class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image preview"
+        >
+            <!-- Close backdrop -->
+            <div id="lightbox-backdrop" class="absolute inset-0"></div>
+
+            <div
+                class="relative max-w-5xl w-full flex flex-col items-center gap-3 z-10"
+            >
+                <!-- Close button -->
+                <button
+                    id="lightbox-close"
+                    class="absolute -top-10 right-0 text-white/70 hover:text-white transition-colors focus:outline-none"
+                    aria-label="Close preview"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        width="24"
+                        height="24"
+                    >
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+                <!-- Image -->
+                <img
+                    id="lightbox-img"
+                    src=""
+                    alt=""
+                    class="max-h-[80vh] w-full object-contain rounded-xl shadow-2xl"
+                />
+                <!-- Caption -->
+                <p
+                    id="lightbox-caption"
+                    class="font-mono text-[0.75rem] text-white/60 tracking-wide"
+                ></p>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                const lb = document.getElementById("lightbox");
+                const lbImg = document.getElementById("lightbox-img");
+                const lbCaption = document.getElementById("lightbox-caption");
+                const lbClose = document.getElementById("lightbox-close");
+                const lbBg = document.getElementById("lightbox-backdrop");
+
+                function openLightbox(src, caption) {
+                    lbImg.src = src;
+                    lbImg.alt = caption || "";
+                    lbCaption.textContent = caption || "";
+                    lb.classList.remove("opacity-0", "pointer-events-none");
+                    document.body.style.overflow = "hidden";
+                }
+                function closeLightbox() {
+                    lb.classList.add("opacity-0", "pointer-events-none");
+                    document.body.style.overflow = "";
+                    setTimeout(() => {
+                        lbImg.src = "";
+                    }, 200);
+                }
+
+                document
+                    .querySelectorAll(".lightbox-trigger")
+                    .forEach((btn) => {
+                        btn.addEventListener("click", () => {
+                            openLightbox(btn.dataset.src, btn.dataset.caption);
+                        });
+                    });
+                lbClose.addEventListener("click", closeLightbox);
+                lbBg.addEventListener("click", closeLightbox);
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") closeLightbox();
+                });
+            })();
+        </script>
+
+        <!-- Blog preview loader (inline so it runs after DOM) -->
+        <script type="module">
+            fetch("/posts/posts.json")
+                .then((r) => r.json())
+                .then((posts) => {
+                    const container = document.getElementById("blog-preview");
+                    const top3 = posts.slice(0, 3);
+                    container.innerHTML = top3
+                        .map(
+                            (p, i) => `
+          <article class="reveal blog-stagger card p-6 flex flex-col gap-3 hover:shadow-[0_8px_28px_rgba(0,0,0,0.28)] hover:-translate-y-1 transition-all" style="transition-delay:${i * 90}ms">
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <time class="font-mono text-[0.68rem] text-t3">${p.date}</time>
+              <div class="flex gap-1.5">${p.tags.map((t) => `<span class="blog-tag">${t}</span>`).join("")}</div>
+            </div>
+            <h3 class="text-[0.97rem] font-semibold text-t1 leading-snug">${p.title}</h3>
+            <p class="text-[0.85rem] text-t2 leading-[1.7] flex-1">${p.excerpt}</p>
+            <a href="/blog/post.html?slug=${p.slug}" class="font-mono text-[0.78rem] text-accent mt-auto hover:text-accent-hi hover:tracking-wide transition-all">Read more →</a>
+          </article>
+        `,
+                        )
+                        .join("");
+                    // trigger reveal observer for newly added cards
+                    document
+                        .querySelectorAll("#blog-preview .reveal")
+                        .forEach((el) => {
+                            if (window.__revealObs)
+                                window.__revealObs.observe(el);
+                            else el.classList.add("visible");
+                        });
+                })
+                .catch(() => {
+                    document.getElementById("blog-preview").innerHTML =
+                        '<div class="col-span-full text-center text-t3 font-mono text-sm py-8">No posts yet.</div>';
+                });
+        </script>
+    </body>
+</html>

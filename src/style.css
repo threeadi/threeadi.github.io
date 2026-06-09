@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-canvas text-t1 antialiased overflow-x-hidden;
+        font-family: "Inter", system-ui, sans-serif;
+    }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        @apply transition-colors duration-200;
+    }
+}
+
+@layer components {
+    /* ---------- Buttons ---------- */
+    .btn {
+        @apply inline-flex items-center gap-2 px-6 py-[11px] rounded font-mono text-[0.82rem] font-medium border transition-all duration-200 whitespace-nowrap cursor-pointer;
+    }
+    .btn-primary {
+        @apply text-accent border-accent hover:bg-accent/10;
+    }
+    .btn-ghost {
+        @apply text-t2 border-line-hi hover:text-t1 hover:border-t2;
+    }
+    .btn-outline {
+        @apply text-accent border-accent hover:bg-accent/10;
+    }
+    .btn-lg {
+        @apply px-8 py-[14px] text-[0.88rem];
+    }
+
+    /* ---------- Tags ---------- */
+    .tag {
+        @apply font-mono text-[0.7rem] text-accent bg-accent/10 border border-accent/20 px-[10px] py-[3px] rounded-full;
+    }
+    .tag-org {
+        @apply font-mono text-[0.7rem] text-accent-org bg-accent-org/10 border border-accent-org/20 px-[10px] py-[3px] rounded-full;
+    }
+    .skill-tag {
+        @apply font-mono text-sm text-t1 bg-surface-2 border border-line-hi px-[14px] py-[6px] rounded-full transition-all duration-200 cursor-default hover:text-accent hover:border-accent hover:bg-accent/10 hover:shadow-[0_0_14px_rgba(79,156,249,0.22)];
+    }
+    .blog-tag {
+        @apply font-mono text-[0.62rem] text-accent bg-accent/10 px-2 py-[2px] rounded-full;
+    }
+
+    /* ---------- Card ---------- */
+    .card {
+        @apply bg-surface border border-line rounded-2xl transition-all duration-200 hover:border-line-hi;
+    }
+
+    /* ---------- Navbar scroll state (toggled by JS) ---------- */
+    .nav-scrolled {
+        background-color: rgba(10, 8, 5, 0.92);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 1px 0 #2e2318;
+    }
+}
+
+@layer utilities {
+    /* Hero dot grid */
+    .hero-dots {
+        background-color: #0a0805;
+        background-image: radial-gradient(
+            circle,
+            rgba(196, 169, 110, 0.2) 1.5px,
+            transparent 1.5px
+        );
+        background-size: 28px 28px;
+    }
+
+    /* Flashlight overlay — --mx/--my set by JS on mousemove */
+    /* Layer 1 (::before): warm amber glow at cursor */
+    .hero-light::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            300px circle at var(--mx, -9999px) var(--my, -9999px),
+            rgba(196, 169, 110, 0.1) 0%,
+            transparent 70%
+        );
+        pointer-events: none;
+        z-index: 0;
+    }
+    /* Layer 2 (::after): dark brown vignette with transparent window */
+    .hero-light::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            700px circle at var(--mx, -9999px) var(--my, -9999px),
+            transparent 0%,
+            transparent 18%,
+            rgba(10, 8, 5, 0.75) 50%,
+            rgba(10, 8, 5, 0.97) 72%
+        );
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease;
+    }
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Timeline vertical spine — thin, flat, consistent */
+    .tl-spine {
+        background-color: #3d3025;
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+            max-height 0.35s ease,
+            opacity 0.25s ease;
+    }
+    #mobile-menu.open {
+        max-height: 400px;
+        opacity: 1;
+    }
+    @media (min-width: 768px) {
+        #mobile-menu {
+            display: none !important;
+        }
+    }
+
+    /* Hamburger icon → X */
+    #hamburger span {
+        transition:
+            transform 0.2s ease,
+            opacity 0.2s ease;
+    }
+    #hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    #hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    #hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Blog post prose */
+    .prose-blog h1 {
+        @apply text-3xl font-bold text-t1 mb-4 mt-10;
+    }
+    .prose-blog h2 {
+        @apply text-2xl font-bold text-t1 mb-3 mt-8;
+    }
+    .prose-blog h3 {
+        @apply text-xl font-semibold text-t1 mb-2 mt-6;
+    }
+    .prose-blog p {
+        @apply text-t2 leading-[1.8] mb-4;
+    }
+    .prose-blog ul {
+        @apply list-disc ml-6 mb-4 text-t2 space-y-1;
+    }
+    .prose-blog ol {
+        @apply list-decimal ml-6 mb-4 text-t2 space-y-1;
+    }
+    .prose-blog code {
+        @apply font-mono text-[0.82rem] text-accent bg-surface-2 border border-line px-[6px] py-[2px] rounded;
+    }
+    .prose-blog pre {
+        @apply bg-surface border border-line rounded-xl p-5 overflow-x-auto mb-6;
+    }
+    .prose-blog pre code {
+        @apply bg-transparent border-none p-0 text-t2;
+    }
+    .prose-blog blockquote {
+        @apply border-l-4 border-accent pl-5 italic text-t2 my-5;
+    }
+    .prose-blog a {
+        @apply text-accent hover:text-accent-hi underline underline-offset-2;
+    }
+    .prose-blog strong {
+        @apply text-t1 font-semibold;
+    }
+    .prose-blog hr {
+        @apply border-line my-8;
+    }
+}

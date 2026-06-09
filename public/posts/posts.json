@@ -1,0 +1,35 @@
+[
+    {
+        "slug": "promotion-engine",
+        "title": "Building a Multi-Rule Promotion Engine: Lessons from Production",
+        "date": "Jun 09, 2025",
+        "tags": [
+            "backend",
+            "architecture",
+            "laravel"
+        ],
+        "excerpt": "Key learnings from designing a flexible promotion engine that handles dynamic targeting, stacking logic, and minimum purchase rules at enterprise e-commerce scale."
+    },
+    {
+        "slug": "warehouse-routing",
+        "title": "Geolocation-Based Warehouse Routing: A Deep Dive",
+        "date": "Mar 15, 2025",
+        "tags": [
+            "go",
+            "systems",
+            "geolocation"
+        ],
+        "excerpt": "How we designed a multi-warehouse stock allocation system using geolocation to reduce order processing time by 30% and improve fulfillment efficiency."
+    },
+    {
+        "slug": "api-performance",
+        "title": "API Performance: From Bottleneck to 50% Faster Response Times",
+        "date": "Jan 02, 2025",
+        "tags": [
+            "laravel",
+            "performance",
+            "mysql"
+        ],
+        "excerpt": "A practical guide to query optimization, indexing strategies, and caching techniques that cut API response times by half in a high-traffic academic system."
+    }
+]

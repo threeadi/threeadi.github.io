@@ -102,9 +102,9 @@
                     <div class="feature-copy"><h3>DatascripMall.ID</h3>
                     <p>Multi-rule promotions and warehouse routing.</p>
                     <a href="/blog/promotion-engine/">Explore the promotion engine →</a></div>
-                    <div class="project-preview" aria-hidden="true"><img width="800" height="1072" decoding="async" src="/images/datascripmall-marketplace-preview.webp" alt=""><img width="800" height="378" decoding="async" src="/images/datascripmall-seller-preview.webp" alt=""></div>
+                    <div class="project-preview" aria-hidden="true"><img width="800" height="1072" decoding="async" src="/images/datascripmall-marketplace-preview.webp" alt="DatascripMall marketplace homepage"><img width="800" height="378" decoding="async" src="/images/datascripmall-seller-preview.webp" alt="DatascripMall seller dashboard"></div>
                 </article>
-                <a id="finaid-summary" class="work-row" href="#finaid-detail"><div><h3>ITB FinAid</h3><p>Scholarship workflows for 1,000+ active students.</p></div><img width="800" height="1378" decoding="async" src="/images/itbfinaid-scholarship-list-preview.webp" alt=""><span>→</span></a>
+                <a id="finaid-summary" class="work-row" href="#finaid-detail"><div><h3>ITB FinAid</h3><p>Scholarship workflows for 1,000+ active students.</p></div><img width="800" height="1378" decoding="async" src="/images/itbfinaid-scholarship-list-preview.webp" alt="ITB FinAid scholarship listing"><span>→</span></a>
                 <article id="finaid-detail" class="project-detail">
                     <h2>ITB FinAid</h2>
                     <p>Scholarship management · Institut Teknologi Bandung · 2024</p>
@@ -221,12 +221,8 @@
                         <path d="M18 6L6 18M6 6l12 12" />
                     </svg>
                 </button>
-                <!-- Image -->
-                <img
-                    id="lightbox-img"
-                    alt=""
-                    class="max-h-[80vh] w-full object-contain rounded-xl shadow-2xl"
-                />
+                <!-- The selected image is inserted here when the lightbox opens. -->
+                <div id="lightbox-media" class="w-full"></div>
                 <!-- Caption -->
                 <p
                     id="lightbox-caption"
@@ -238,14 +234,18 @@
         <script>
             (function () {
                 const lb = document.getElementById("lightbox");
-                const lbImg = document.getElementById("lightbox-img");
+                const lbMedia = document.getElementById("lightbox-media");
                 const lbCaption = document.getElementById("lightbox-caption");
                 const lbClose = document.getElementById("lightbox-close");
                 const lbBg = document.getElementById("lightbox-backdrop");
 
                 function openLightbox(src, caption) {
+                    const lbImg = document.createElement("img");
                     lbImg.src = src;
                     lbImg.alt = caption || "";
+                    lbImg.className =
+                        "max-h-[80vh] w-full object-contain rounded-xl shadow-2xl";
+                    lbMedia.replaceChildren(lbImg);
                     lbCaption.textContent = caption || "";
                     lb.classList.remove("opacity-0", "pointer-events-none");
                     document.body.style.overflow = "hidden";
@@ -254,7 +254,9 @@
                     lb.classList.add("opacity-0", "pointer-events-none");
                     document.body.style.overflow = "";
                     setTimeout(() => {
-                        if (lb.classList.contains("opacity-0")) lbImg.removeAttribute("src");
+                        if (lb.classList.contains("opacity-0")) {
+                            lbMedia.replaceChildren();
+                        }
                     }, 200);
                 }
 

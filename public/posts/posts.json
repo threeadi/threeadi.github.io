@@ -3,6 +3,7 @@
         "slug": "promotion-engine",
         "title": "Building a Multi-Rule Promotion Engine: Lessons from Production",
         "date": "Jun 09, 2025",
+        "dateISO": "2025-06-09",
         "tags": [
             "backend",
             "architecture",
@@ -14,6 +15,7 @@
         "slug": "warehouse-routing",
         "title": "Geolocation-Based Warehouse Routing: A Deep Dive",
         "date": "Mar 15, 2025",
+        "dateISO": "2025-03-15",
         "tags": [
             "go",
             "systems",
@@ -25,6 +27,7 @@
         "slug": "api-performance",
         "title": "API Performance: From Bottleneck to 50% Faster Response Times",
         "date": "Jan 02, 2025",
+        "dateISO": "2025-01-02",
         "tags": [
             "laravel",
             "performance",

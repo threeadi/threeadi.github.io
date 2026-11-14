@@ -3,132 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title id="page-title">Post — Tri Adi</title>
-        <meta
-            name="description"
-            id="page-desc"
-            content="Blog post by Tri Adi."
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <script type="module" src="/src/blog-post.js"></script>
+        <meta name="robots" content="noindex, follow" />
+        <title>Redirecting — Tri Adi</title>
+        <script>
+            const slug = new URLSearchParams(location.search).get("slug");
+            location.replace(slug ? `/blog/${encodeURIComponent(slug)}/` : "/blog/");
+        </script>
     </head>
     <body>
-        <!-- Navbar -->
-        <nav
-            id="navbar"
-            class="fixed top-0 left-0 right-0 h-[68px] z-50 transition-all duration-300"
-        >
-            <div
-                class="max-w-site mx-auto px-6 h-full flex items-center justify-between"
-            >
-                <a
-                    href="/"
-                    class="font-mono text-xl font-semibold text-accent hover:text-accent-hi"
-                    >tri.</a
-                >
-                <a
-                    href="/blog/"
-                    class="font-mono text-[0.8rem] text-t2 hover:text-accent transition-colors flex items-center gap-1.5"
-                >
-                    <svg
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        width="12"
-                        height="12"
-                        aria-hidden="true"
-                    >
-                        <path d="M10.5 3L5 8l5.5 5" />
-                    </svg>
-                    All Posts
-                </a>
-            </div>
-        </nav>
-
-        <!-- Loading / error state -->
-        <div
-            id="post-loading"
-            class="min-h-screen flex items-center justify-center bg-canvas"
-        >
-            <div class="text-center">
-                <div
-                    class="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin mx-auto mb-4"
-                ></div>
-                <p class="font-mono text-sm text-t3">Loading post…</p>
-            </div>
-        </div>
-
-        <!-- Post content (hidden until loaded) -->
-        <article id="post-wrap" class="hidden bg-canvas min-h-screen">
-            <!-- Post header -->
-            <header class="pt-[68px] pb-12 bg-canvas border-b border-line">
-                <div class="max-w-[720px] mx-auto px-6 pt-14">
-                    <div id="post-tags" class="flex flex-wrap gap-2 mb-5"></div>
-                    <h1
-                        id="post-title"
-                        class="text-[clamp(1.75rem,4vw,2.75rem)] font-bold tracking-tight text-t1 leading-tight mb-4"
-                    ></h1>
-                    <div class="flex items-center gap-4 flex-wrap">
-                        <time
-                            id="post-date"
-                            class="font-mono text-sm text-t3"
-                        ></time>
-                        <span class="text-t3 text-xs">·</span>
-                        <span
-                            id="post-read"
-                            class="font-mono text-sm text-t3"
-                        ></span>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Markdown body -->
-            <div class="max-w-[720px] mx-auto px-6 py-14">
-                <div id="post-body" class="prose-blog"></div>
-
-                <!-- Back link -->
-                <div class="mt-14 pt-8 border-t border-line">
-                    <a
-                        href="/blog/"
-                        class="font-mono text-sm text-t2 hover:text-accent transition-colors flex items-center gap-2"
-                    >
-                        <svg
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            width="14"
-                            height="14"
-                            aria-hidden="true"
-                        >
-                            <path d="M10.5 3L5 8l5.5 5" />
-                        </svg>
-                        Back to all posts
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Error state (hidden by default) -->
-        <div
-            id="post-error"
-            class="hidden min-h-screen flex items-center justify-center bg-canvas"
-        >
-            <div class="text-center max-w-sm mx-auto px-6">
-                <p class="font-mono text-accent text-2xl mb-4">404</p>
-                <p class="text-t2 mb-6">Post not found.</p>
-                <a href="/blog/" class="btn btn-outline">Back to Blog</a>
-            </div>
-        </div>
-
-        <footer class="bg-canvas border-t border-line py-8">
-            <div class="max-w-site mx-auto px-6 text-center">
-                <p class="font-mono text-[0.68rem] text-t3">© 2025 Tri Adi.</p>
-            </div>
-        </footer>
+        <p>Redirecting to <a href="/blog/">Engineering notes</a>…</p>
     </body>
 </html>

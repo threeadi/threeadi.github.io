@@ -3,108 +3,66 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Blog — Tri Adi</title>
-        <meta
-            name="description"
-            content="Writing on software engineering, system design, and Go/PHP/Laravel."
-        />
+        <title>Engineering Notes — Tri Adi</title>
+        <meta name="description" content="Technical writing by Tri Adi on Laravel, Go, promotion engines, warehouse routing, and API performance." />
+        <meta name="author" content="Tri Adi" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#f8f5f0" />
+        <link rel="canonical" href="https://threeadi.github.io/blog/" />
+        <meta property="og:title" content="Engineering Notes — Tri Adi" />
+        <meta property="og:description" content="Practical notes on backend systems, architecture, and performance." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://threeadi.github.io/blog/" />
+        <meta property="og:site_name" content="Tri Adi" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Engineering Notes — Tri Adi" />
+        <meta name="twitter:description" content="Practical notes on backend systems, architecture, and performance." />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Blog",
+                "name": "Engineering Notes — Tri Adi",
+                "url": "https://threeadi.github.io/blog/",
+                "description": "Technical writing on backend systems, architecture, and performance.",
+                "author": { "@type": "Person", "name": "Tri Adi", "url": "https://threeadi.github.io/" }
+            }
+        </script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
         <script type="module" src="/src/blog-index.js"></script>
     </head>
-    <body>
-        <!-- Navbar -->
-        <nav
-            id="navbar"
-            class="fixed top-0 left-0 right-0 h-[68px] z-50 transition-all duration-300"
-        >
-            <div
-                class="max-w-site mx-auto px-6 h-full flex items-center justify-between"
-            >
-                <a
-                    href="/"
-                    class="font-mono text-xl font-semibold text-accent hover:text-accent-hi"
-                    >tri.</a
-                >
-                <div class="hidden md:flex items-center gap-4">
-                    <a
-                        href="/#experience"
-                        class="font-mono text-[0.8rem] text-t2 hover:text-accent transition-colors"
-                        >Experience</a
-                    >
-                    <a
-                        href="/#skills"
-                        class="font-mono text-[0.8rem] text-t2 hover:text-accent transition-colors"
-                        >Skills</a
-                    >
-                    <a href="/blog/" class="font-mono text-[0.8rem] text-accent"
-                        >Blog</a
-                    >
-                    <a
-                        href="/#contact"
-                        class="font-mono text-[0.8rem] text-accent border border-accent px-4 py-1.5 rounded hover:bg-accent/10 transition-all"
-                        >Contact</a
-                    >
-                </div>
+    <body class="writing-page">
+        <nav class="writing-nav" aria-label="Primary navigation">
+            <a class="writing-brand" href="/" aria-label="Tri Adi home">tri<span>.</span></a>
+            <div class="writing-nav-links">
+                <a href="/#experience">Experience</a>
+                <a href="mailto:triadilaksamana@gmail.com">Discuss a project ↗</a>
             </div>
         </nav>
 
-        <!-- Page header -->
-        <header class="pt-[68px] pb-16 bg-canvas border-b border-line">
-            <div class="max-w-site mx-auto px-6 pt-16">
-                <p class="font-mono text-[0.9rem] text-accent mb-3">
-                    03. writing
-                </p>
-                <h1
-                    class="text-[clamp(2rem,5vw,3rem)] font-bold tracking-tight text-t1 mb-4"
-                >
-                    All Posts
-                </h1>
-                <p class="text-t2 text-base max-w-xl leading-[1.75]">
-                    Thoughts on software engineering, system design, performance,
-                    and building things that scale.
-                </p>
-            </div>
+        <header class="writing-masthead">
+            <h1>Engineering notes<span>.</span></h1>
+            <p>Practical breakdowns of backend systems I have designed, debugged, and improved in production.</p>
         </header>
 
-        <!-- Posts grid -->
-        <main class="py-16 bg-canvas">
-            <div class="max-w-site mx-auto px-6">
-                <!-- Search / filter bar -->
-                <div class="flex flex-wrap gap-3 mb-10 items-center">
-                    <input
-                        id="search"
-                        type="search"
-                        placeholder="Search posts…"
-                        class="bg-surface border border-line rounded-lg px-4 py-2 font-mono text-sm text-t1 placeholder:text-t3 focus:outline-none focus:border-accent transition-colors w-64"
-                    />
-                    <div id="tag-filters" class="flex flex-wrap gap-2">
-                        <!-- tag buttons injected by JS -->
-                    </div>
-                </div>
-
-                <div
-                    id="posts-grid"
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-                >
-                    <div
-                        class="col-span-full text-center font-mono text-sm text-t3 py-12"
-                    >
-                        Loading posts…
-                    </div>
-                </div>
+        <main class="writing-index">
+            <div class="writing-controls">
+                <label class="writing-search">
+                    <span>Search articles</span>
+                    <input id="search" type="search" placeholder="Promotion, Laravel, performance…" autocomplete="off" />
+                </label>
+                <div id="tag-filters" class="writing-filters" aria-label="Filter articles by topic"></div>
+            </div>
+            <div id="posts-grid" class="writing-list" aria-live="polite">
+                <p class="writing-status">Loading articles…</p>
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="bg-canvas border-t border-line py-8">
-            <div class="max-w-site mx-auto px-6 text-center">
-                <p class="font-mono text-[0.68rem] text-t3">© 2025 Tri Adi.</p>
-            </div>
+        <footer class="writing-footer">
+            <p>© 2026 Tri Adi</p>
+            <a href="mailto:triadilaksamana@gmail.com">triadilaksamana@gmail.com</a>
         </footer>
     </body>
 </html>

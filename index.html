@@ -23,159 +23,58 @@
         <script type="module" src="/src/main.js"></script>
     </head>
     <body>
-        <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
-        <nav
-            id="navbar"
-            class="fixed top-0 left-0 right-0 h-[68px] z-50 transition-all duration-300"
-        >
-            <div
-                class="max-w-site mx-auto px-6 h-full flex items-center justify-between"
-            >
-                <a
-                    href="/"
-                    class="font-mono text-xl font-semibold text-accent hover:text-accent-hi"
-                    >tri.</a
-                >
-
-                <ul class="hidden md:flex items-center gap-1 list-none">
-                    <li class="flex items-center">
-                        <span class="font-mono text-[0.7rem] text-accent mr-1"
-                            >01.</span
-                        >
-                        <a
-                            href="#experience"
-                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
-                            >Experience</a
-                        >
-                    </li>
-                    <li class="flex items-center">
-                        <span class="font-mono text-[0.7rem] text-accent mr-1"
-                            >02.</span
-                        >
-                        <a
-                            href="#skills"
-                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
-                            >Skills</a
-                        >
-                    </li>
-                    <li class="flex items-center">
-                        <span class="font-mono text-[0.7rem] text-accent mr-1"
-                            >03.</span
-                        >
-                        <a
-                            href="#projects"
-                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
-                            >Projects</a
-                        >
-                    </li>
-                    <li class="flex items-center">
-                        <span class="font-mono text-[0.7rem] text-accent mr-1"
-                            >04.</span
-                        >
-                        <a
-                            href="/blog/"
-                            class="font-mono text-[0.8rem] text-t2 px-3 py-1.5 rounded hover:text-accent hover:bg-accent/10 transition-colors"
-                            >Blog</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            class="font-mono text-[0.8rem] text-accent border border-accent px-4 py-1.5 rounded hover:bg-accent/10 transition-all ml-2"
-                            >Contact</a
-                        >
-                    </li>
-                </ul>
-
-                <button
-                    id="hamburger"
-                    class="md:hidden flex flex-col justify-center gap-[5px] w-9 h-9 bg-transparent border-0 cursor-pointer p-1 rounded"
-                    aria-label="Toggle menu"
-                    aria-expanded="false"
-                >
-                    <span class="block w-[22px] h-0.5 bg-t1 rounded"></span>
-                    <span class="block w-[22px] h-0.5 bg-t1 rounded"></span>
-                    <span class="block w-[22px] h-0.5 bg-t1 rounded"></span>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Mobile menu -->
-        <div
-            id="mobile-menu"
-            class="fixed top-[68px] left-0 right-0 z-40 bg-canvas/[0.97] border-b border-line backdrop-blur-xl"
-        >
-            <a
-                href="#experience"
-                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
-                >Experience</a
-            >
-            <a
-                href="#skills"
-                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
-                >Skills</a
-            >
-            <a
-                href="#projects"
-                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
-                >Projects</a
-            >
-            <a
-                href="/blog/"
-                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-3.5 border-b border-line hover:text-accent hover:bg-accent/10 transition-colors"
-                >Blog</a
-            >
-            <a
-                href="#contact"
-                class="mobile-link font-mono text-[0.9rem] text-t2 block px-6 py-4 hover:text-accent hover:bg-accent/10 transition-colors"
-                >Contact</a
-            >
-        </div>
-
-        <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-        <section
-            id="hero"
-            class="hero-dots hero-light min-h-screen flex flex-col justify-center pt-[68px] relative overflow-hidden"
-        >
-            <div class="relative z-10 max-w-site mx-auto px-6 w-full">
-                <p class="font-mono text-[0.9rem] text-accent mb-4">
-                    Hi, my name is
-                </p>
-                <h1
-                    class="text-[clamp(2.8rem,8vw,5.5rem)] font-bold tracking-[-2px] leading-[1.05] text-t1 mb-2"
-                >
-                    Tri Adi.
-                </h1>
-                <h2
-                    class="text-[clamp(1.5rem,4.5vw,3.2rem)] font-bold tracking-[-0.8px] leading-[1.15] text-t2 mb-7"
-                >
-                    I build scalable backend systems.
-                </h2>
-                <p class="max-w-[560px] text-base text-t2 leading-[1.75] mb-10">
-                    Software Engineer with 2+ years of experience building
-                    high-traffic systems using PHP (Laravel) and Go. Specialized
-                    in multi-rule promotion engines, distributed warehouse
-                    systems, and API performance optimization at scale.
-                </p>
-                <div class="flex gap-4 flex-wrap">
-                    <a href="#experience" class="btn btn-primary"
-                        >View My Work</a
-                    >
-                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        <div class="portfolio-layout">
+            <header class="profile-panel">
+                <a class="signature" href="/" aria-label="Tri Adi home">tri<span>.</span></a>
+                <div class="profile-copy">
+                    <h1>Tri Adi<span>.</span></h1>
+                    <p class="role">Backend Software Engineer</p>
+                    <p class="intro">I build checkout systems, automate workflows, and improve API performance.</p>
+                    <p class="stack">Laravel · Go</p>
+                    <a class="project-cta" href="mailto:triadilaksamana@gmail.com">Discuss a project ↗</a>
+                    <a class="experience-link" href="#experience">View experience →</a>
                 </div>
-            </div>
-
-            <div
-                class="absolute bottom-9 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 font-mono text-[0.65rem] tracking-[1.5px] uppercase text-t3 animate-bounce"
-                aria-hidden="true"
-            >
-                <span>Scroll to experience</span>
-                <div
-                    class="w-2.5 h-2.5 border-r-[1.5px] border-b-[1.5px] border-t3 rotate-45 mt-0.5"
-                ></div>
-            </div>
-        </section>
-
+                <svg class="database-art" viewBox="0 0 400 200" fill="none" aria-hidden="true" focusable="false">
+                    <defs>
+                        <path id="system-route" d="M-8 170 135 98 Q142 95 149 98 L204 125 Q211 129 218 125 L309 79 Q316 75 323 79 L341 88 L341 54 408 20"/>
+                        <path id="database-route" d="M211 127 155 155 Q148 159 141 155 L113 141"/>
+                        <g id="system-node" fill="#191039" stroke="#b9abd7" stroke-linejoin="round">
+                            <path d="M0-34 46-11 0 12-46-11Z"/>
+                            <path d="M-46-11v38L0 50V12Z"/>
+                            <path d="M46-11v38L0 50V12Z"/>
+                        </g>
+                        <g id="database-stack" fill="#191039" stroke="#b9abd7">
+                            <path d="M-36 0v38c0 16 72 16 72 0V0"/>
+                            <ellipse rx="36" ry="12"/>
+                            <path d="M-36 13c0 16 72 16 72 0m-72 13c0 16 72 16 72 0" fill="none"/>
+                        </g>
+                    </defs>
+                    <g stroke="#9584b5" stroke-linecap="round" stroke-linejoin="round">
+                        <use href="#system-route"/>
+                        <use href="#database-route"/>
+                    </g>
+                    <use href="#system-node" transform="translate(258 62) scale(.98)"/>
+                    <use href="#database-stack" transform="translate(88 132) scale(.86)"/>
+                    <g fill="#d8fa28">
+                        <circle cx="142" cy="98" r="2.7"/>
+                        <circle cx="211" cy="127" r="2.7"/>
+                        <circle cx="341" cy="88" r="2.7"/>
+                        <circle class="packet system-packet" r="3.4"/>
+                        <circle class="packet database-packet" r="3.4"/>
+                    </g>
+                </svg>
+            </header>
+            <main class="work-panel" aria-label="Portfolio">
+                <h2>Selected work</h2>
+                <article class="featured-work">
+                    <div class="feature-copy"><h3>DatascripMall.ID</h3>
+                    <p>Multi-rule promotions and warehouse routing.</p>
+                    <a href="/blog/post.html?slug=promotion-engine">Explore the promotion engine →</a></div>
+                    <div class="project-preview" aria-hidden="true"><img src="/images/datascripmall-marketplace.png" alt=""><img src="/images/datascripmall-seller.png" alt=""></div>
+                </article>
+                <a class="work-row" href="#finaid-detail"><div><h3>ITB FinAid</h3><p>Scholarship workflows for 1,000+ active students.</p></div><img src="/images/itbfinaid-scholarship-list.png" alt=""><span>→</span></a>
+                <a class="work-row" href="/blog/post.html?slug=api-performance"><div><h3>ITB Mobile</h3><p>Academic API performance.</p></div><span>→</span></a>
+                <section class="work-notes"><h2>Engineering notes</h2><a href="/blog/post.html?slug=warehouse-routing">Geolocation-based warehouse routing ↗</a><a href="/blog/">All writing →</a></section>
         <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
         <section id="experience" class="py-24 bg-canvas">
             <div class="max-w-site mx-auto px-6">
@@ -789,7 +688,7 @@
                             class="flex items-start justify-between gap-3 flex-wrap"
                         >
                             <div>
-                                <h3
+                                <h3 id="finaid-detail"
                                     class="text-[1.05rem] font-semibold text-t1 mb-0.5"
                                 >
                                     ITB FinAid
@@ -1090,7 +989,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+        </main></div><!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
         <footer class="bg-canvas border-t border-line py-10">
             <div
                 class="max-w-site mx-auto px-6 flex flex-col items-center gap-3.5 text-center"
